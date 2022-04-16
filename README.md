@@ -29,7 +29,8 @@ git clone https://github.com/tmux-plugins/tmux-sensible ~/.config/.tmux/plugins
 <hr>
 
 ### GIT SUBMODULES CHEATSHEET
-```
+
+```shell
 # HOW TO CREATE A SUBMODULE ?
 git submodule add git@github.com:my_account/my_submodule.git path_to_my_submodule 
 
