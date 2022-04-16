@@ -136,7 +136,7 @@ eval "$(/usr/local/Homebrew/bin/brew shellenv)"
 ##########
 
 # tmux source-file ~/.config/.tmux.conf 
-tmux -f ~/.config/.tmux.conf 2> /dev/null
+
 
 # tmux start-server \; source-file ~/.config/.tmux.conf 2> /dev/null
 
