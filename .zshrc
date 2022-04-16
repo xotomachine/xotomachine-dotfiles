@@ -85,6 +85,7 @@ zstyle ':omz:update' mode auto # ZSH UPDATE
 #########
 
 source "$HOME/antigen.zsh" # ANTIGEN
+ANTIGEN_AUTO_CONFIG=false
 
 # IN CASE OF TROULE 
 antigen init $HOME/.config/zsh/.antigenrc # LOAD ANTIGEN
