@@ -121,7 +121,7 @@ source "$HOME/.config/zsh/config/completions.sh" # COMPLETIONS
 # BREW
 ######
 
-eval "$(/usr/local/Homebrew/bin/brew shellenv)"
+# eval "$(/usr/local/Homebrew/bin/brew shellenv)"
 
 ######
 # SSH
