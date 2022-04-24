@@ -9,7 +9,7 @@ alias pgit='history | grep git | peco'
 alias pcat='ls | peco | xargs cat'
 alias pvi='ls | peco | xargs nvim'
 
-alias tmux='tmux -f ~/.config/.tmux.conf 2> /dev/null'
+# alias tmux='tmux -f ~/.config/.tmux.conf 2> /dev/null'
 # alias cat="ccat"
 
 pfvi () { pfind $1 nvim; }

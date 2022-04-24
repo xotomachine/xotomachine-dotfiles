@@ -159,3 +159,4 @@ source "$HOME/.config/zsh/config/completions.sh" # COMPLETIONS
 ##############
 
 # source "$HOME/.sdkman/bin/sdkman-init.sh"
+tmux source-file ~/.config/.tmux.conf 2> /dev/null
