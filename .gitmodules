@@ -5,7 +5,7 @@
 	
 [submodule "nvim"]
 	path = nvim
-	url = git@github.com:CosmicNvim/CosmicNvim.git
+	url = https://github.com/CosmicNvim/CosmicNvim.git
 	branch = 0.5.1 
 	
 [submodule ".tmux/plugins/nord-tmux"]
