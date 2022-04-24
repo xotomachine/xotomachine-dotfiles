@@ -5,6 +5,7 @@
 - [TABLE OF CONTENTS](#table-of-contents)
 - [DIRECTORY](#directory)
 - [INSTRUCTIONS NIM](#instructions-nim)
+- [Setup tmux](#setup-tmux)
 - [GIT SUBMODULES CHEATSHEET](#git-submodules-cheatsheet)
 
 ### DIRECTORY
@@ -20,13 +21,16 @@
 mv ~/.config ~/.config-BK
 # CLONE
 git clone --recurse-submodules https://github.com/xotomachine/xotomachine-dotfiles.git ~/.config > /dev/null
-# TMP
-git clone https://github.com/tmux-plugins/tpm ~/.config/.tmux/plugins/tpm
-# NORD
-git clone https://github.com/tmux-plugins/tmux-sensible ~/.config/.tmux/plugins
 ```
 
 <hr>
+
+### Setup tmux
+```shell
+# run tmux
+tmux 
+# prefix+space i to install all deps 
+```
 
 ### GIT SUBMODULES CHEATSHEET
 
