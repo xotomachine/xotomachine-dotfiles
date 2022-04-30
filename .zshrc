@@ -124,39 +124,42 @@ source "$HOME/.config/zsh/config/completions.sh" # COMPLETIONS
 
 # eval "$(/usr/local/Homebrew/bin/brew shellenv)"
 
-######
-# SSH
-######
-
-# eval "$(ssh-agent)"
-# eval $(ssh-agent -s) >/dev/null 2>&1
-# ssh-add -K ~/.ssh/id_rsa_{NAME} >/dev/null 2>&1
-
-##########
-# TMUX
-##########
-
-# tmux source-file ~/.config/.tmux.conf 
-
-
-# tmux start-server \; source-file ~/.config/.tmux.conf 2> /dev/null
-
-# session_name="xoto"
-# tmux has-session -t=$session_name 2> /dev/null
-
-# if [[ $? -ne 0 ]]; then
-#   TMUX='' tmux new-session -d -s "$session_name"
-# fi
-
-# if [[ -z "$TMUX" ]]; then
-#   tmux attach -t "$session_name"
-# else
-#   tmux switch-client -t "$session_name"
-# fi
-
 ##############
 # JAVA SDK MAN
 ##############
 
 # source "$HOME/.sdkman/bin/sdkman-init.sh"
+# tmux start-server \; source-file ~/.config/.tmux.conf 2> /dev/null
+
+##########
+# TMUX
+##########
+
 tmux source-file ~/.config/.tmux.conf 2> /dev/null
+
+# tmux start-server \; source-file ~/.config/.tmux.conf 2> /dev/null
+
+session_name="xoto"
+
+tmux has-session -t=$session_name 2> /dev/null
+
+if [[ $? -ne 0 ]]; then
+  TMUX='' tmux new-session -d -s "$session_name"
+fi
+
+if [[ -z "$TMUX" ]]; then
+  tmux attach -t "$session_name"
+else
+  tmux switch-client -t "$session_name"
+fi
+# tmux source-file ~/.config/.tmux.conf 2> /dev/null
+
+######
+# SSH
+######
+
+{ eval `ssh-agent`; ssh-add -K ~/.ssh/id_rsa_xotosphere } &>/dev/null
+
+# eval "$(ssh-agent)"
+# eval $(ssh-agent -s) >/dev/null 2>&1
+# ssh-add -K ~/.ssh/id_rsa_{NAME} >/dev/null 2>&1
