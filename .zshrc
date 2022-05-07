@@ -152,6 +152,7 @@ if [[ -z "$TMUX" ]]; then
 else
   tmux switch-client -t "$session_name"
 fi
+
 # tmux source-file ~/.config/.tmux.conf 2> /dev/null
 
 ######
@@ -160,6 +161,9 @@ fi
 
 { eval `ssh-agent`; ssh-add -K ~/.ssh/id_rsa_xotosphere } &>/dev/null
 
-# eval "$(ssh-agent)"
-# eval $(ssh-agent -s) >/dev/null 2>&1
-# ssh-add -K ~/.ssh/id_rsa_{NAME} >/dev/null 2>&1
+######
+# LVIM
+######
+
+PATH=$PATH:~/.local/bin
+export PATH
