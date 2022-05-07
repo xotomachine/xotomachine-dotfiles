@@ -12,6 +12,9 @@ an executable
 lvim.log.level = "warn"
 lvim.format_on_save = true
 lvim.colorscheme = "tokyonight"
+
+
+
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
 
@@ -146,11 +149,47 @@ lvim.builtin.treesitter.highlight.enabled = true
 -- Additional Plugins
 lvim.plugins = {
   { "folke/tokyonight.nvim" },
+  { "nvim-lualine/lualine.nvim",
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true },
+    options = {
+      -- ... your lualine config
+      theme = 'tokyonight'
+      -- ... your lualine config
+    },
+
+  },
   {
     "folke/trouble.nvim",
     cmd = "TroubleToggle",
   },
 }
+
+--vim.g.tokyonight_style = "night"
+
+--lvim.tokyonight_style = "night"
+--lvim.tokyonight_italic_functions = 1
+-- lvim.tokyonight_sidebars = [ "qf", "vista_kind", "terminal", "packer" ]
+
+-- " Change the "hint" color to the "orange" color, and make the "error" color bright red
+-- lvim.tokyonight_colors = {
+--   \ 'hint': 'orange',
+--   \ 'error': '#ff0000'
+-- \ }
+
+
+-- Example config in Lua
+lvim.tokyonight_style = "night"
+lvim.tokyonight_italic_functions = 1
+
+-- Example config in Lua
+vim.g.tokyonight_style = "night"
+vim.g.tokyonight_italic_functions = true
+vim.g.tokyonight_sidebars = { "qf", "vista_kind", "terminal", "packer" }
+
+-- Change the "hint" color to the "orange" color, and make the "error" color bright red
+vim.g.tokyonight_colors = { hint = "orange", error = "#ff0000" }
+
+
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 -- lvim.autocommands.custom_groups = {
