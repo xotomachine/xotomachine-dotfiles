@@ -165,5 +165,12 @@ fi
 # LVIM
 ######
 
-PATH=$PATH:~/.local/bin
-export PATH
+export PATH=$PATH:~/.local/bin
+
+######
+# LINUXBREW
+######
+
+export PATH="$HOME/.linuxbrew/bin:$PATH"
+export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
+export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
