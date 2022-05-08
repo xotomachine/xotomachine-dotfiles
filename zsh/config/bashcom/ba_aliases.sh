@@ -79,6 +79,9 @@ alias oproj="cd ~/Documents/igit/igithub/utility-list/util-toolbox/igithub.prefs
 alias ovscodex="open ~/.vscode/extensions";
 alias ohis="fc -l | cut -c 8-";
 alias olocal="open http://localhost:3000";
+alias wopen="explorer.exe $1";
+alias mopen="open $1";
+alias uopen="open $1";
 
 # CLEAN
 alias clean.mac="cleanup";
@@ -191,5 +194,4 @@ alias updatedot="cd ~/.dotfiles && git pull origin master && git submodule updat
 alias brewpwd="brew --prefix";
 alias path="echo -e ${PATH//:/\\n}";
 alias zshconfig="code ~/.zshrc";
-trash() { command mv "$@" ~/.Trash; };
 
