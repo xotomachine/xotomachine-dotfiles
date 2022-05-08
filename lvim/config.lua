@@ -178,7 +178,7 @@ lvim.plugins = {
 
 
 -- Example config in Lua
-lvim.tokyonight_style = "night"
+lvim.tokyonight_style = "storm"
 lvim.tokyonight_italic_functions = 1
 
 -- Example config in Lua
@@ -188,7 +188,17 @@ vim.g.tokyonight_sidebars = { "qf", "vista_kind", "terminal", "packer" }
 
 -- Change the "hint" color to the "orange" color, and make the "error" color bright red
 vim.g.tokyonight_colors = { hint = "orange", error = "#ff0000" }
-
+vim.g.tokyonight_terminal_colors = true
+vim.g.tokyonight_italic_comments = true
+vim.g.tokyonight_italic_keywords = true
+vim.g.tokyonight_italic_variables = false
+vim.g.tokyonight_transparent = false
+vim.g.tokyonight_hide_inactive_statusline = false
+vim.g.tokyonight_transparent_sidebar = false
+vim.g.tokyonight_dark_sidebar = true
+vim.g.tokyonight_dark_float = true
+vim.g.tokyonight_day_brightness = 0.3
+vim.g.tokyonight_lualine_bold = false
 
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
