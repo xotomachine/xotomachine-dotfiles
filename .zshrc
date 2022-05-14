@@ -159,7 +159,23 @@ fi
 # SSH
 ######
 
-{ eval `ssh-agent`; ssh-add -K ~/.ssh/id_rsa_xotosphere } &>/dev/null
+case $(uname | tr '[:upper:]' '[:lower:]') in
+  linux*)
+    echo "linux ssh init"
+    { eval `ssh-agent`; ssh-add -D;  ssh-add -K ~/.ssh/linux/id_rsa_xotosphere; ssh-add -K ~/.ssh/linux/id_rsa_mongosphere; ssh-add -K ~/.ssh/linux/id_rsa_gregcousin126; ssh-add -K ~/.ssh/linux/id_rsa_xotopio;} &>/dev/null
+    ;;
+  darwin*)
+     echo "mac ssh init"
+    { eval `ssh-agent`; ssh-add -D; ssh-add -K ~/.ssh/mac/id_rsa_xotosphere; ssh-add -K ~/.ssh/mac/id_rsa_mongosphere; ssh-add -K ~/.ssh/mac/id_rsa_gregcousin126; ssh-add -K ~/.ssh/mac/id_rsa_xotopio;} &>/dev/null
+    ;;
+  msys*)
+   echo "windows ssh init"
+    { eval `ssh-agent`; ssh-add -D; ssh-add -K ~/.ssh/windows/id_rsa_xotosphere; ssh-add -K ~/.ssh/windows/id_rsa_mongosphere; ssh-add -K ~/.ssh/windows/id_rsa_gregcousin126; ssh-add -K ~/.ssh/windows/id_rsa_xotopio;} &>/dev/null
+    ;;
+  *)
+    echo "other os init ssh"
+    ;;
+esac
 
 ######
 # LVIM
